@@ -14,20 +14,16 @@ import android.widget.Toast;
 public class MainActivity extends Activity {
     private serviceReceiver receiver;
     IntentFilter intentFilter;
-    private TextView message_tv;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         receiver = new serviceReceiver();
         receiver.registerHandler(updateHandler);
         intentFilter = new IntentFilter();
         intentFilter.addAction("UPDATE_ACTION");
         registerReceiver(receiver, intentFilter);
-
-
         Intent intent = new Intent(MainActivity.this,LoginService.class);
         this.startService(intent);
     }
@@ -37,12 +33,8 @@ public class MainActivity extends Activity {
 
             Bundle bundle = msg.getData();
             String message = bundle.getString("message");
-
-            Log.d("service", "Handler:" + message);
-
-            Toast toast = Toast.makeText( MainActivity.this, "Hello", Toast.LENGTH_SHORT); toast.show();
-            //message_tv.setText(message);
-
+            Log.d("service", "Receiver:" + message);
+            Toast toast = Toast.makeText( MainActivity.this, message, Toast.LENGTH_SHORT); toast.show();
         }
     };
 }
