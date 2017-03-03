@@ -16,6 +16,7 @@
             </intent-filter>
         </activity>
         <service android:name=".LoginService" />
+        <receiver android:name=".serviceReceiver" />
     </application>
 
 </manifest>

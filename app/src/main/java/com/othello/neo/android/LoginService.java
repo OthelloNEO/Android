@@ -29,24 +29,41 @@ public class LoginService extends IntentService {
 
     @Override
     protected void onHandleIntent(Intent intent) {
-         try {
-             Log.d("IntentService", "onHandleIntent Start");
-             Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
 
- /*       Runnable semder = new Runnable(){
-            @Override
-            public void run() {
-                Socket socket = null;
-                String address = "localhost";
-                String strPort = "8080";
+        Log.d("IntentService", "onHandleIntent Start");
+        long endTime = System.currentTimeMillis() + 5*1000;
+        while (System.currentTimeMillis() < endTime) {
+            synchronized (this) {
+                try {
+                    wait(endTime - System.currentTimeMillis());
+                } catch (Exception e) {
+                }
             }
-        };
-   */
-        onDestroy();
+        }
+             /*       Runnable semder = new Runnable(){
+                        @Override
+                        public void run() {
+                            Socket socket = null;
+                            String address = "localhost";
+                            String strPort = "8080";
+                        }
+                    };
+               */
+
+            String message = "メッセージ";
+            sendBroadCast(message);
+
+
+
     }
 
+    protected void sendBroadCast(String message) {
+
+        Intent broadcastIntent = new Intent();
+        broadcastIntent.putExtra("message", message);
+        broadcastIntent.setAction("UPDATE_ACTION");
+        getBaseContext().sendBroadcast(broadcastIntent);
+
+    }
 
 }

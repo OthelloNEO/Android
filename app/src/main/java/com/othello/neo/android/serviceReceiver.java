@@ -4,6 +4,8 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.provider.SyncStateContract;
 import android.util.Log;
 import android.widget.Toast;
@@ -13,14 +15,22 @@ import android.widget.Toast;
  */
 
 public class serviceReceiver extends BroadcastReceiver {
+    public static Handler handler;
     @Override
     public void onReceive(Context context, Intent intent) {
         Bundle bundle = intent.getExtras();
         String message = bundle.getString("message");
-        Log.d("serviceReceiver", "Receive message");
-        Toast.makeText(
-                context,
-                "onReceive! " + message,
-                Toast.LENGTH_LONG).show();
+
+        if(handler !=null){
+            Message msg = new Message();
+
+            Bundle data = new Bundle();
+            data.putString("message", message);
+            msg.setData(data);
+            handler.sendMessage(msg);
+        }
+    }
+    public void registerHandler(Handler locationUpdateHandler) {
+        handler = locationUpdateHandler;
     }
 }
