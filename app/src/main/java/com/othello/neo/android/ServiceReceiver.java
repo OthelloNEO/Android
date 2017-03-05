@@ -14,7 +14,7 @@ import android.widget.Toast;
  * Created by Tomoyuki on 2017/03/01.
  */
 
-public class ServiceReceiver extends BroadcastReceiver {
+public class serviceReceiver extends BroadcastReceiver {
     public static Handler handler;
     @Override
     public void onReceive(Context context, Intent intent) {

@@ -12,14 +12,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    private ServiceReceiver receiver;
+    private serviceReceiver receiver;
     IntentFilter intentFilter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        receiver = new ServiceReceiver();
+        receiver = new serviceReceiver();
         receiver.registerHandler(updateHandler);
         intentFilter = new IntentFilter();
         intentFilter.addAction("UPDATE_ACTION");
