@@ -1,17 +1,17 @@
 package com.othello.neo.android;
 
 import android.app.Activity;
-//import android.support.v7.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
     private serviceReceiver receiver;
     IntentFilter intentFilter;
 
@@ -34,6 +34,12 @@ public class MainActivity extends Activity {
             Bundle bundle = msg.getData();
             String message = bundle.getString("message");
             Log.d("service", "Receiver:" + message);
+
+            if(message.matches("loginok")){
+                Log.d("service", "loginok");
+                Intent intent=new Intent(MainActivity.this,SelectMenuActivity.class);
+                startActivity(intent);
+            }
             Toast toast = Toast.makeText( MainActivity.this, message, Toast.LENGTH_SHORT); toast.show();
         }
     };

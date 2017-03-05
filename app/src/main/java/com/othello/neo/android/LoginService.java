@@ -39,7 +39,7 @@ public class LoginService extends IntentService {
     protected void onHandleIntent(Intent intent) {
 
         Log.d("IntentService", "onHandleIntent Start");
-/*        long endTime = System.currentTimeMillis() + 5*1000;
+        long endTime = System.currentTimeMillis() + 2*1000;
         while (System.currentTimeMillis() < endTime) {
             synchronized (this) {
                 try {
@@ -47,12 +47,12 @@ public class LoginService extends IntentService {
                 } catch (Exception e) {
                 }
             }
-        }*/
-        /*Runnable sender = new Runnable(){
+        }
+       /* Runnable sender = new Runnable(){
              @Override
              public void run() {
                  Socket socket;
-                 String address = "192.168.56.1";
+                 String address = "192.168.100.101";
                  String strPort = "8080";
                  int port = Integer.parseInt(strPort);
                  String username_str = "test";
@@ -76,7 +76,7 @@ public class LoginService extends IntentService {
         };
         Thread th = new Thread(sender);
         th.start();*/
-        sendBroadCast("onHandleIntent Finish");
+        sendBroadCast("loginok");
     }
 
     protected void sendBroadCast(String message) {
