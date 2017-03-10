@@ -1,4 +1,7 @@
 <resources>
-    <string name="app_name">NEO_shimizu</string>
+    <string name="app_name">NEO</string>
     <string name="title">タイトル画面</string>
+    <string name="tab1">タブ１</string>
+    <string name="tab2">タブ２</string>
+    <string name="tab3">タブ３</string>
 </resources>
