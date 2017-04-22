@@ -98,9 +98,9 @@ public class SelectMenuActivity extends AppCompatActivity {
 
             switch (position){
                 case 0:
-                    return new SelectGameActivity();
-                case 1:
                     return PlaceholderFragment.newInstance(position + 1);
+                case 1:
+                    return new SelectGameActivity();
                 case 2:
                     return PlaceholderFragment.newInstance(position + 1);
             }
