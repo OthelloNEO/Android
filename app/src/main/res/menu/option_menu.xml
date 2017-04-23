@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/item0"
+        android:icon="@drawable/bird"
+        android:orderInCategory="0"
+        android:title="状態初期化"
+        app:showAsAction="never"></item>
+    <item
+        android:id="@+id/item1"
+        android:icon="@drawable/bird"
+        android:orderInCategory="1"
+        android:title="条件指定で暗記チャレンジ"
+        app:showAsAction="never"></item>
+    <item
+        android:id="@+id/item2"
+        android:icon="@drawable/bird"
+        android:orderInCategory="2"
+        android:title="棋譜の削除"
+        app:showAsAction="never"></item>
+</menu>

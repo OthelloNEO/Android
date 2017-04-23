@@ -2,4 +2,13 @@
     <string name="app_name">NEO_shimizu</string>
     <string name="title">タイトル画面</string>
     <string name="section_format">Hello World from section: %1$d</string>
+    <string-array name="entries">
+        <item>0</item>
+        <item>+2</item>
+        <item>+4</item>
+        <item>+6</item>
+        <item>-2</item>
+        <item>-4</item>
+        <item>-6</item>
+    </string-array>
 </resources>
