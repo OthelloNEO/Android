@@ -4,79 +4,79 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.othello.neo.android.GameMainActivity">
+    tools:context="com.othello.neo.android.MainActivity">
 
-       <view
-           android:id="@+id/board_view"
-           class="com.othello.neo.android.Board_View"
-           id="@+id/view"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           tools:layout_editor_absoluteY="0dp"
-           tools:layout_editor_absoluteX="0dp" />
+    <view
+        android:id="@+id/board_view"
+        class="com.othello.neo.android.Board_View"
+        id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp" />
 
-       <Button
-           android:id="@+id/btn_proceed"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_alignParentBottom="true"
-           android:layout_alignParentLeft="true"
-           android:layout_alignParentStart="true"
-           android:layout_marginBottom="8dp"
-           android:layout_marginRight="8dp"
-           android:onClick="btnProceed_onClick"
-           android:text="進む"
-           app:layout_constraintBottom_toBottomOf="parent"
-           app:layout_constraintRight_toRightOf="parent" />
+    <Button
+        android:id="@+id/btn_proceed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
+        android:onClick="btnProceed_onClick"
+        android:text="進む"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
-       <Button
-           android:id="@+id/btn_BackToStart"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_marginBottom="64dp"
-           android:layout_marginLeft="8dp"
-           android:layout_marginRight="8dp"
-           android:onClick="btnBackToStart_onClick"
-           android:text="初手へ"
-           app:layout_constraintBottom_toBottomOf="parent"
-           app:layout_constraintHorizontal_bias="0.0"
-           app:layout_constraintLeft_toLeftOf="parent"
-           app:layout_constraintRight_toRightOf="parent" />
+    <Button
+        android:id="@+id/btn_BackToStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:onClick="btnBackToStart_onClick"
+        android:text="初手へ"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
-       <Button
-           android:id="@+id/btn_ProceedToFinal"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_marginRight="8dp"
-           android:onClick="btnProceedToFinal_onClick"
-           android:text="最終手へ"
-           app:layout_constraintRight_toRightOf="parent"
-           android:layout_marginBottom="8dp"
-           app:layout_constraintBottom_toTopOf="@+id/btn_proceed" />
+    <Button
+        android:id="@+id/btn_ProceedToFinal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:onClick="btnProceedToFinal_onClick"
+        android:text="最終手へ"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_proceed" />
 
-       <Button
-           android:id="@+id/btn_registration"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_marginBottom="64dp"
-           android:layout_marginLeft="8dp"
-           android:layout_marginRight="8dp"
-           android:onClick="btnRegistration_onClick"
-           android:text="棋譜の登録"
-           app:layout_constraintBottom_toBottomOf="@+id/board_view"
-           app:layout_constraintLeft_toRightOf="@+id/btn_BackToStart"
-           app:layout_constraintRight_toLeftOf="@+id/btn_ProceedToFinal" />
+    <Button
+        android:id="@+id/btn_registration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:onClick="btnRegistration_onClick"
+        android:text="棋譜の登録"
+        app:layout_constraintBottom_toBottomOf="@+id/board_view"
+        app:layout_constraintLeft_toRightOf="@+id/btn_BackToStart"
+        app:layout_constraintRight_toLeftOf="@+id/btn_ProceedToFinal" />
 
-       <Button
-           android:id="@+id/btn_Challenge"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_marginBottom="8dp"
-           android:layout_marginLeft="8dp"
-           android:layout_marginRight="8dp"
-           android:text="暗記チャレンジモードへ"
-           app:layout_constraintBottom_toBottomOf="parent"
-           app:layout_constraintLeft_toLeftOf="parent"
-           app:layout_constraintRight_toLeftOf="@+id/btn_proceed" />
+    <Button
+        android:id="@+id/btn_Challenge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:text="暗記チャレンジモードへ"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btn_proceed" />
 
-   </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

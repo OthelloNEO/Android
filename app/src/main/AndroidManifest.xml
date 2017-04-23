@@ -19,6 +19,7 @@
         <service android:name=".LoginService" />
         <receiver android:name=".serviceReceiver" />
         <activity android:name=".SelectMenuActivity" android:label="SelectMenu"></activity>
+        <activity android:name=".GameMainActivity" android:label="GameMain"></activity>
     </application>
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
 </manifest>

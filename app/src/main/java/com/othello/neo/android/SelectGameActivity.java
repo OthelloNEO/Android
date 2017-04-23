@@ -38,9 +38,9 @@ public class SelectGameActivity extends Fragment {
 
             @Override
             public void onClick(View v) {
-                //Intent intent = new Intent(getActivity(), GameMainActivity.class);
-                //startActivity(intent);
-                Toast.makeText(getActivity(), "Intent to GameMainActivity", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getActivity(), GameMainActivity.class);
+                startActivity(intent);
+                //Toast.makeText(getActivity(), "Intent to GameMainActivity", Toast.LENGTH_SHORT).show();
 
 
             }
